@@ -4,8 +4,7 @@ const breed = process.argv[2];
 
 let url = "https://api.thecatapi.com/v1/breeds/search?q=";
 
-url += breed;
-request(url, (error, response, body) => {
+request(url += breed, (error, response, body) => {
   if (error) {
     console.error(error);
     return;
